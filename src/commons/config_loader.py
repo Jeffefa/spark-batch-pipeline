@@ -23,7 +23,7 @@ class ConfigLoader:
         relative_path = self.folders.get(key)
         if not relative_path:
             raise KeyError(f"Path key '{key}' not found in FOLDERS configuration.")
-        return str(self.base_path / relative_path.replace("../", "")).resolve()
+        return str((self.base_path / relative_path.replace("../", "")).resolve())
     
     def get_setting(self, key: str):
         # Return the setting value for the given key
