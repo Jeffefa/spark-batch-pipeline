@@ -1,0 +1,15 @@
+
+{
+  "dtbl_mandatory_fields": [
+    "duns",
+    "primaryName",
+    "primaryAddress.addressCountry.name",
+    "primaryAddress.addressRegion.name",
+    "primaryAddress.streetAddress.line1",
+    "registeredName"
+  ],
+  "fmlt_mandatory_fields": [
+    "transactionDetail.transactionID",
+    "globalUltimateDuns"
+  ]
+}
