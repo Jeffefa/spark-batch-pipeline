@@ -1,0 +1,57 @@
+{
+    "whitelist_datablocks": {
+        "dw_company_data": [
+            {"path": "duns", "alias": "duns"},
+            {"path": "primaryName", "alias": "primary_name"},
+            {"path": "registeredName", "alias": "registered_name"},
+            {"path": "primaryIndustryCode.usSicV4", "alias": "sic_id"},
+            {"path": "primaryIndustryCode.usSicV4Description", "alias": "sic_description"},
+            {"path": "defaultCurrency", "alias": "default_currency"},
+            {"path": "primaryAddress.addressCountry.name", "alias": "primary_address_country"},
+            {"path": "primaryAddress.continentalRegion.name", "alias": "primary_address_region"},
+            {"path": "primaryAddress.streetAddress.line1", "alias": "primary_address_street"},
+            {"path": "primaryAddress.postalCode", "alias": "postal_code"},
+            {"path": "businessEntityType.description", "alias": "business_entity_type"},
+            {"path": "businessEntityType.dnbCode", "alias": "business_dnb_code"},
+            {"path": "incorporatedDate", "alias": "incorporated_date"},
+            {"path": "fiscalYearEnd", "alias": "fiscal_year_end"},
+            {"path": "legalEntityIdentifier", "alias": "legal_entity_identifier"}
+        ],
+        "dw_industry_code": [
+            {"path": "industryCodes.code", "alias": "code"},
+            {"path": "duns", "alias": "duns"},
+            {"path": "industryCodes.description", "alias": "description"},
+            {"path": "industryCodes.typeDescription", "alias": "type_description"},
+            {"path": "industryCodes.typeDnBCode", "alias": "type_dnb_code"},
+            {"path": "industryCodes.priority", "alias": "priority"}
+        ],
+        "dw_stock_exchanges": [
+            {"path": "duns", "alias": "duns"},
+            {"path": "stockExchanges.tickerName", "alias": "stock_name"},
+            {"path": "stockExchanges.exchangeCountry.isoAlpha2Code", "alias": "country"},
+            {"path": "stockExchanges.exchangeName.description", "alias": "exchange_name"}
+        ]
+    },
+    "whitelist_familytree": {
+        "dw_family_tree": [
+            {"path": "globalUltimateDuns", "alias": "global_duns"},
+            {"path": "transactionDetail.inLanguage", "alias": "in_language"},
+            {"path": "transactionDetail.transactionID", "alias": "transaction_id"},
+            {"path": "transactionDetail.transactionTimestamp", "alias": "transaction_timestamp"}
+        ],
+        "dw_family_tree_members": [
+            {"path": "familyTreeMembers.duns", "alias": "duns"},
+            {"path": "globalUltimateDuns", "alias": "global_duns"},
+            {"path": "familyTreeMembers.primaryName", "alias": "primary_name"},
+            {"path": "familyTreeMembers.startDate", "alias": "start_date"},
+            {"path": "familyTreeMembers.primaryAddress.addressCountry.name", "alias": "address_country"},
+            {"path": "familyTreeMembers.primaryAddress.addressLocality", "alias": "address_locality"},
+            {"path": "familyTreeMembers.primaryAddress.postalCode", "alias": "postal_code"},
+            {"path": "familyTreeMembers.primaryAddress.streetAddress.line1", "alias": "street1"},
+            {"path": "familyTreeMembers.primaryAddress.streetAddress.line2", "alias": "street2"},
+            {"path": "familyTreeMembers.primaryIndustryCode.usSicV4", "alias": "sic_id"},
+            {"path": "familyTreeMembers.primaryIndustryCode.usSicV4Description", "alias": "sic_description"},
+            {"path": "familyTreeMembers.corporateLinkage.hierarchyLevel", "alias": "hierarchy_level"}
+        ]
+    }
+}

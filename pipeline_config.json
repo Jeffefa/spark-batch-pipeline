@@ -1,0 +1,20 @@
+{
+    "FOLDERS":{
+        "UPLOADS": "../workingArea/uploads",
+        "PROCESSED_FILES": "../workingArea/processedFiles",
+        "CONTROL": "../datasets/control/tb_pipeline_control",
+        "QUARANTINE": "../datasets/control/tb_quarantine_files",
+        "ODS_DTBL": "../datasets/ods/ods_datablocks_raw",
+        "ODS_FMLT": "../datasets/ods/ods_familytree_raw",
+        "DW_COMPANY_DATA": "../datasets/dw/dw_company_data",
+        "DW_INDUSTRY_CODE": "../datasets/dw/dw_industry_code",
+        "DW_STOCK_EXCHANGES": "../datasets/dw/dw_stock_exchanges",
+        "DW_FAMILY_TREE": "../datasets/dw/dw_family_tree",
+        "DW_FAMILY_MEMBERS": "../datasets/dw/dw_family_tree_members",
+        "APP": "../datasets/app/app_stocks_by_company"
+    },
+    "PIPELINE_SETTINGS": {
+        "SHARDS": 2,
+        "SPARK_APP_NAME": "BatchPipeline"
+    }
+}
