@@ -3,6 +3,7 @@
         "UPLOADS": "../workingArea/uploads",
         "PROCESSED_FILES": "../workingArea/processedFiles",
         "CONTROL": "../datasets/control/tb_pipeline_control",
+        "CONTROL_FILE": "../datasets/control/tb_pipeline_control/control_tracker.json",
         "QUARANTINE": "../datasets/control/tb_quarantine_files",
         "ODS_DTBL": "../datasets/ods/ods_datablocks_raw",
         "ODS_FMLT": "../datasets/ods/ods_familytree_raw",
