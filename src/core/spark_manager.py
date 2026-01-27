@@ -10,7 +10,7 @@ class SparkManager:
     def __init__(self, config: ConfigLoader):
         self.config = config
         self.logger = setup_logger("SparkManager")
-        self.app_name = self.config.get_setting("SPARK_BATCH_APP") or "DefaultBatchApp"
+        self.app_name = self.config.get_setting("SPARK_BATCH_APP") or "Pipeline_Jeffv2"
         self._spark = None
     
     def get_session(self) -> SparkSession:

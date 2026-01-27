@@ -8,7 +8,7 @@ class ConfigLoader:
         self.base_path = Path(os.path.abspath(config_path)).parent
         self.config_data = self._load_file(config_path)
         self.folders = self.config_data.get("FOLDERS", {})
-        self.settings = self.config_data.get("PIPELINES_SETTINGS", {})
+        self.settings = self.config_data.get("PIPELINE_SETTINGS", {})
 
     def _load_file(self, file_path: str) -> dict:
         # Read/Load the file if exists
