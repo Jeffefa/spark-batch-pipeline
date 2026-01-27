@@ -37,7 +37,7 @@
   * app_stocks_by_company
 
 ## Entity-Relationship Diagram (ERD)
-![Entity-Relationship Diagram](./docs/Efficio_ERD.jpg)
+![Entity-Relationship Diagram](./docs/Arquitecture_ERD.jpg)
 
 ## Scaling for AWS Modules
 ### Batch
@@ -54,7 +54,7 @@
 | CloudWatch | For log and metrics about the system modules |
 | Account Baseline | Defining the user access and permissions |
 
-![AWS Diagram](./docs/Efficio_AWS.jpg)
+![AWS Diagram](./docs/Arquitecture_AWS.jpg)
 
 ## Adjusts for other Cloud environment 
 
@@ -77,7 +77,7 @@ For **Oracle** or **Azure**, I don't have much modules knowledge to design the s
 ``` bash
 JeffSolution
 ├── README.md
-├── dataIngestion
+├── datasets
 │   ├── app
 │   │   └── app_stocks_by_company
 │   ├── control
@@ -93,32 +93,31 @@ JeffSolution
 │       ├── ods_datablocks_raw
 │       └── ods_familytree_raw
 ├── docs
-│   ├── Efficio_AWS.jpg
-│   └── Efficio_ERD.jpg
+│   ├── Arquitecture_AWS.jpg
+│   └── Arquitecture_ERD.jpg
+├── pipeline_config.json
+├── requirements.txt
 ├── src
-│   ├── config
-│   │   └── pipeline_config.json
+│   ├── __init__.py
+│   ├── commons
+│   │   ├── __init__.py
+│   │   ├── config_loader.py
+│   │   ├── execution_tracker.py
+│   │   └── logger_setup.py
+│   ├── core
+│   │   ├── __init__.py
+│   │   ├── ods_ingestor.py
+│   │   └── spark_manager.py
 │   ├── main.py
-│   ├── requirements.txt
-│   ├── s1_insert_ods.py
-│   ├── s2_insert_dw.py
-│   ├── s3_insert_app.py
 │   └── utils
 │       ├── mandatory_fields.json
 │       └── whitelist.json
+├── tests
+│   ├── test_commons.py
+│   ├── test_ods_ingestion.py
+│   └── test_spark.py
 └── workingArea
     ├── processedFiles
     └── uploads
-        ├── companyA
-        │   ├── data_blocks.json
-        │   └── family_tree.json
-        ├── companyB
-        │   ├── data_blocks.json
-        │   └── family_tree.json
-        ├── companyC
-        │   ├── data_blocks.json
-        │   └── family_tree.json
-        └── companyD
-            ├── data_blocks.json
-            └── family_tree.json
+
 ```
