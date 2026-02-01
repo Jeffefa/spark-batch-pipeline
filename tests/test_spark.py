@@ -1,13 +1,10 @@
-from src.core.spark_manager import SparkManager
-from src.commons.config_loader import ConfigLoader
 import pytest
 
-def test_spark_manager_initialization():
+def test_spark_manager_initialization(init_config):
     """
     Checks that SparkManager initialize a Spark session.
     """
-    config = ConfigLoader(config_path="pipeline_config.json")
-    spark_manager = SparkManager(config)
+    _, spark_manager = init_config
 
     spark1 = spark_manager.get_session()
     spark2 = spark_manager.get_session()
