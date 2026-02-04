@@ -1,3 +1,4 @@
+import os 
 import sys
 from datetime import datetime
 from src.commons.config_loader import ConfigLoader
@@ -5,6 +6,7 @@ from src.commons.logger_setup import setup_logger
 from src.commons.execution_tracker import ExecutionTracker
 from src.core.spark_manager import SparkManager
 from src.core.ods_ingestor import ODSIngestor
+from src.core.dw_ingestor import DWIngestor
 
 def main():
     """
@@ -30,9 +32,16 @@ def main():
         ods = ODSIngestor(spark_manager, config, tracker)
         ods.run_ingestion()
 
-        # logger.info("Starting DW Ingestion Step")
-        # dw = DWIngestior(spark_manager, config, tracker)
-        # dw.run_ingestion()
+        logger.info("Starting DW Ingestion Step")
+        dw = DWIngestor(spark_manager, config, tracker)
+
+        dirpath = config.get_path("ODS_DTBL")
+        ref_date_list_dtbl = [s.name for s in os.scandir(dirpath) if s.is_dir() and not s.name.startswith('.')]
+        dw.run_ingestion('DataBlocks', sorted(ref_date_list_dtbl))
+
+        dirpath = config.get_path("ODS_FMLT")
+        ref_date_list_fmlt = [s.name for s in os.scandir(dirpath) if s.is_dir() and not s.name.startswith('.')]
+        dw.run_ingestion('FamilyTree', sorted(ref_date_list_fmlt))
 
         # logger.info("Starting APP ingestion Step")
         # app = APPIngestor(spark_manager, config, tracker)
