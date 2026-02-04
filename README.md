@@ -3,8 +3,8 @@
 ## Pipeline execution
 **Virtual environment:** source venv/bin/activate \
 **Requirements:** pip install -r requirements.txt \
-**Path:** ./JeffSolution/src \
-**Cmd:** python3 main.py \
+**Path:** ./spark-batch-pipeline \
+**Cmd:** make run \
 
 ## Logic flow - Data Lake
 **Upload Folder:** ./JeffSolution/workingArea/uploads
