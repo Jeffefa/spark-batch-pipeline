@@ -4,7 +4,8 @@
 **Virtual environment:** source venv/bin/activate \
 **Requirements:** pip install -r requirements.txt \
 **Path:** ./spark-batch-pipeline \
-**Cmd:** make run \
+**Cmd to Run:** make run \
+**Cmd to Test:** make test \
 
 ## Logic flow - Data Lake
 **Upload Folder:** ./JeffSolution/workingArea/uploads
